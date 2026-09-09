@@ -34,8 +34,15 @@ completions, loop or cron ticks, hook-triggered turns, scheduled runs. Between t
 little or nothing; the tool results carry the record. **Nothing can be deferred to a later
 message, and nothing said in an unprompted turn has been delivered.**
 
-Write the last message before you stop as if it is the only one I will see, because it is.
-It carries:
+**A dispatch is not a stopping point.** While any background work is in flight — a
+subagent, a build, a long run — the turn is not finished, whatever the tooling says about
+replying in the meantime. Write no substantive message until everything has come back: the
+results land in a turn I don't read, so reporting early guarantees I get half the story,
+and the half I get is the half that matters least. If something truly cannot wait, stop the
+background work first and say that you stopped it.
+
+Write your final message, once all work including background work is done, as if it is the
+only one I will see, because it is. It carries:
 
 - **Decisions you made without asking**, especially deviations from an approved plan or
   spec, and what they cost if they turn out wrong.
