@@ -8,6 +8,11 @@
   ToolSearch; only fall back to bash grep if the dedicated Grep tool
   cannot be loaded.
 
+## Line length
+
+- **Don't churn lines to satisfy line length.** Line length is enforced almost nowhere in my codebases (some Python libraries excepted), so a long new line is fine. Never reflow or re-wrap existing lines to make room for an edit or to tidy up. Where a limit is genuinely enforced, break only the offending line, even if that leaves some very short lines, rather than touching neighboring lines to make it look even.
+- **Never hard-wrap prose in Markdown files.** Hard wraps often break syntax highlighting. Write each paragraph or list item as one line. Wrap only where a line break is meaningful, e.g. inside a code block.
+
 ## Python environments
 
 - **NEVER create a Python environment without asking me first.** This
