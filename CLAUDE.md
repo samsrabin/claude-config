@@ -102,3 +102,28 @@ upstream convention; anything a future bisect would need. State verification sta
 honestly — including "not compiled, built or run" when that's the case.
 
 Wrap the body at 72 columns.
+
+## No ready-to-paste prose for humans
+
+Don't write prose I could copy-paste to another person. When I need to produce
+something for human readers, give bullet points (fragments, not full sentences)
+covering the main ideas, and I'll write the actual text.
+
+Applies to:
+- Emails, messages, and other communication
+- PR descriptions (writing them up is how I confirm I understand my own change)
+- Standalone docs (READMEs, design docs, etc.)
+
+Does not apply to (write these fully as normal):
+- Commit messages
+- Code comments and docstrings
+- Error messages, log strings, CLI help text, and other text embedded in code
+
+Rules:
+- Bullets are incomplete sentences. Use a short full sentence only when no
+  fragment can be unambiguous.
+- Assume I'm the only audience. Don't tailor bullets to the eventual reader's
+  tone or expectations; I'll handle that.
+- Don't add extras (suggested structure, things I might forget, tone notes).
+- Only write full prose when I explicitly ask for a draft or full text.
+
