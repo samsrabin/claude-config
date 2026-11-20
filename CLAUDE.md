@@ -1,13 +1,5 @@
 # Personal preferences
 
-## Tool usage
-
-- Always use the dedicated Grep tool for searching file contents.
-  Do NOT shell out to `grep` / `egrep` / `rg` via Bash. If a Grep tool
-  is not available in the current environment, request it via
-  ToolSearch; only fall back to bash grep if the dedicated Grep tool
-  cannot be loaded.
-
 ## Line length
 
 - **Don't churn lines to satisfy line length.** Line length is enforced almost nowhere in my codebases (some Python libraries excepted), so a long new line is fine. Never reflow or re-wrap existing lines to make room for an edit or to tidy up. Where a limit is genuinely enforced, break only the offending line, even if that leaves some very short lines, rather than touching neighboring lines to make it look even.
